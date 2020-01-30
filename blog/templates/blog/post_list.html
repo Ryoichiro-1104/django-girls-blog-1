@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block contents %}
+
+<a href="{% url 'post_new' %}"><button type="button" class="btn btn-success">New Post</button></a>
+<h1>hellow world</h1>
+
+    {% for post in posts %}
+ 
+        <h2> {{post.title}} </h2>
+        <em> {{post.author}} </em>
+        <p> {{post.created_date}} </p>
+        <small> {{post.text}} </small>
+        <hr>
+    
+    {% endfor %}
+
+
+{% endblock contents %}
